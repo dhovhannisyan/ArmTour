@@ -1,0 +1,20 @@
+@import '../assets/csss/breackpoints';
+
+:host {
+  display: block;
+  overflow: hidden;
+  main {
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+    overflow-y: auto;
+
+    .main-wrapper {
+      // height: 2500px;
+      padding: 20px;
+      min-height: calc(100vh - 140px);
+      @include on-md-screen() {
+        padding: 30px;
+      }
+    }
+  }
+}

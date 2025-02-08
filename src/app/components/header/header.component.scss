@@ -1,0 +1,42 @@
+@import '../../../assets/csss/breackpoints';
+
+:host {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 4px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background-color: white;
+  header {
+    padding: 0 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1900px;
+    margin: 0 auto;
+    @include on-md-screen() {
+      padding: 0 30px;
+    }
+    .logo {
+      font-size: 18px;
+      color: cadetblue;
+      .a {
+        font-size: 40px;
+        font-weight: bold;
+        color: coral;
+        font-family: monospace;
+      }
+      .t {
+        font-size: 25px;
+        font-weight: bold;
+        color: #6c86e2;
+      }
+    }
+
+  }
+}
