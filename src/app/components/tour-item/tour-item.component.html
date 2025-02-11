@@ -1,1 +1,6 @@
-<p>tour-item works!</p>
+
+<div class="tour-card">
+  <h3 class="tour-card__header">{{ tour.name[ language$ | async ] }}</h3>
+  <img class="tour-card__image" [src]="tour.images[0]" alt="">
+  <p class="tour-card__description truncate">{{ tour.description[ language$ | async ] | truncate:120}}</p>
+</div>

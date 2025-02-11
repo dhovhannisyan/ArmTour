@@ -1,1 +1,9 @@
-<p>tour-list works!</p>
+<ul class="tour-list">
+  @for (tour of tours; track tour.id) {
+    <li>
+      <a [routerLink]="'/tours/' + tour.id">
+       <app-tour-item [tour]="tour"></app-tour-item>
+      </a>
+    </li>
+  }
+</ul>

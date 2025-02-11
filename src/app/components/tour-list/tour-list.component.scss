@@ -1,0 +1,20 @@
+@import '../../../assets/csss/breackpoints';
+
+:host {
+  display: block;
+  .tour-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    @include on-md-screen() {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include on-lg-screen() {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    ul a {
+      display: block;
+    }
+  }
+
+}

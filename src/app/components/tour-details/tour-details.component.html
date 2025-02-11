@@ -1,0 +1,44 @@
+@if (tour) {
+  <div class="tour-details">
+    <h1 class="tour-details__heading">
+      {{ tour.name[ language$ | async ] }}
+    </h1>
+    <p class="tour-details__description">
+      <img class="tour-details__image" [src]="tour.images[0]" alt="">
+      {{ tour.description[ language$ | async ] }}
+    </p>
+  </div>
+  <div class="carousel-wrapper">
+    <!-- Carousel -->
+    <div tuiCarouselButtons class="wrapper">
+      <button
+          class="carousel__btn--prev"
+          iconStart="@tui.chevron-left"
+          tuiIconButton
+          type="button"
+          (click)="carousel.prev()"
+      >
+      Previous
+      </button>
+      <tui-carousel #carousel class="carousel">
+        @for (tourImg of tour.images; track tourImg) {
+          <div *tuiItem class="item">
+            <img [src]="tourImg" alt="" class="carousel__image">
+          </div>
+        }
+      </tui-carousel>
+      <button
+          class="carousel__btn--next"
+          iconStart="@tui.chevron-right"
+          tuiIconButton
+          type="button"
+          (click)="carousel.next()"
+      >
+      Next
+      </button>
+  </div>
+  <img [src]="tour.locationImg" class="location-image">
+</div>
+} @else {
+  <p>No data was found!!</p>
+}

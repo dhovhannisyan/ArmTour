@@ -4,24 +4,24 @@
         [tuiTextfieldLabelOutside]="true"
         [tuiTextfieldSize]="'m'"
     >
-        <tui-data-list-wrapper
-            *tuiDataList
-            [itemContent]="languageContent"
-            [items]="languages"
-        />
-    </tui-select>
+    <tui-data-list-wrapper
+        *tuiDataList
+        [itemContent]="languageContent"
+        [items]="languages"
+    />
+</tui-select>
 
-    <ng-template
-        #languageContent
-        let-item
-    >
-        <div class="language-item">
-            <img
-              height="20"
-              width="30"
-              alt="Image is not visible"
-              [src]="'assets/images/flags/' + item.shortName + '.png'"
-            />
-            <span class="language-name">{{ item.nativName }}</span>
-        </div>
-    </ng-template>
+<ng-template
+    #languageContent
+    let-item
+>
+    <div class="language-item">
+        <img
+          height="20"
+          width="30"
+          alt="Image is not visible"
+          [src]="'assets/images/flags/' + item.shortName + '.png'"
+        />
+        <span class="language-name">{{ item.nativeName }}</span>
+    </div>
+</ng-template>
